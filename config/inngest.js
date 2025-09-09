@@ -26,7 +26,7 @@ export const syncUserCreation = inngest.createFunction(
 
 // inngest function to update user data in database
 
-export const syncUserUpadtion = inngest.createFunction(
+export const syncUserUpdation = inngest.createFunction(
     {
         id : 'update-user-from-clerk'
     }, {
@@ -51,7 +51,7 @@ export const syncUserDelection = inngest.createFunction(
         id : 'delete-user-from-clerk'
     }
     ,{
-        enent : ' clerk/user.deleted'
+        event : ' clerk/user.deleted'
     },
     async ({event })=>{
         const {id} = event.data;
